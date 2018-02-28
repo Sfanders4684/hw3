@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+    <style>
+      body { font-family: 'Lora', serif; }
+      blockquote { font-style: italic; border-left: solid 3px #CCC; padding-left: 12px; margin-top: 6px; }
+      ul:last-child { padding-bottom: 12px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
+
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1>Homework #3: Weather Widget</h1>
+      <hr>
+
+      <div class="row justify-content-between">
+        <div class="col-sm-3">
+          <div id="weather" class="card">
+            <img class="card-img-top bg-primary img-fluid" src="http://openweathermap.org/img/w/01d.png">
+            <div class="card-body">
+              <h4 class="card-title">Paris</h4>
+              <p class="card-text">It is 81 degrees outside.</p>
+              <a id="get_forecast" href="#" class="btn btn-primary">Get Current Temperature</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <p class="lead">Can you modify <code>weather.js</code> to display the current weather conditions outside?</p>
+
+          <ol>
+            <li>
+              <p><strong>10 points: Show the current weather in Paris when the
+                Get Current Temperature button is clicked.</strong></p>
+              <ul>
+                <li>Use the Console to play with the <code>getWeather()</code> function for a bit.</li>
+                <li>Sign up for a free API key from <a href="https://openweathermap.org">OpenWeatherMap</a>.</li>
+                <li>Change the code to use your API key instead of mine.</li>
+                <li>Finish the code that's been started for you in <code>weather.js</code> to update the
+                  displayed temperature.
+                  <blockquote>
+              Notice that the latitude and longitude for Paris have already been hardcoded for you, and
+              the provided code will call the OpenWeatherMap API and retreive the results.
+                However, the code isn't quite finished.  Use your debugging skills to determine
+                how to finish the task.</blockquote></li>
+                <li>The temperature value should be rounded to the nearest integer.</li>
+              </ul>
+            <li><p><strong>6 points: Use your actual location to update the widget.</strong></p>
+              <ul>
+                <li>Use the browser's <code>navigator.geolocation</code> object to obtain the
+                  user's actual real-time latitude and longitude. 
+                  <blockquote>You'll need to call the <code>getCurrentPosition()</code>
+                  function and provide a callback function in order to receive the user's latitude and longitude data.
+                  </blockquote>
+              </li>
+                <li>When you're finished, both the temperature and city name should reflect the your location and
+                current weather.</li>
+              </ul>
+            <li>
+              <p><strong>4 points: Update the weather icon in the widget.</strong>
+              (See the hint at the bottom of weather.js)</p>
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="weather.js"> </script>
+  </body>
+</html>
